@@ -50,7 +50,7 @@ They live on the **stack** (fast memory).
 ### Nullables
 Any value type + `?` can hold `null`.  
 
-```csharp
+
 
 ## C# Reference Types Cheat Sheet
 
