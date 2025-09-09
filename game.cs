@@ -17,33 +17,48 @@ class Game
             new[] {182,184,186,188,190,192,194,196,198,200 }
         };
 
-        int PlayerY = 0;
+        Random rand = new Random();
+
+        // Place the objective randomly on the grid
+        int ObjectX = rand.Next(0, screen.Length);            // row
+        int ObjectY = rand.Next(0, screen[0].Length);         // column
+
         int PlayerX = 0;
+        int PlayerY = 0;
 
         void DrawScreen()
         {
-            //we clear the screen to create the most up to date one
             Console.Clear();
-            for (int X = 0; X < screen.Length; X++)
+            for (int x = 0; x < screen.Length; x++)
             {
-                for (int Y = 0; Y < screen[X].Length; Y++)
+                for (int y = 0; y < screen[x].Length; y++)
                 {
-                    if (X == PlayerX && Y == PlayerY)
-                        Console.Write("# ");
-                    else if (screen[X][Y] % 2 != 0)
-                        Console.Write("|| ");
+                    if (x == PlayerX && y == PlayerY)
+                        Console.Write("# ");   // player
+                    else if (x == ObjectX && y == ObjectY)
+                        Console.Write("X ");   // objective -> we make it so that the object x and the x is the same and we do the same for y
+                    else if (screen[x][y] % 2 != 0)
+                        Console.Write("|| ");  // walls (odd numbers)
                     else
-                        Console.Write("  ");//double space
+                        Console.Write("  ");   // empty
                 }
                 Console.WriteLine();
             }
-            Console.WriteLine("X Cord is " + PlayerY + "    Y Cord is " + PlayerX);
+            Console.WriteLine($"Player at: ({PlayerX},{PlayerY})");
+            Console.WriteLine($"Objective at: ({ObjectX},{ObjectY})");
         }
-        // while true (always) read the user inputed key
+
         while (true)
         {
-            //call to draw screen func, which first deletes teh screen, and tehn reads a key
             DrawScreen();
+
+            // Win condition
+            if (PlayerX == ObjectX && PlayerY == ObjectY)
+            {
+                Console.WriteLine("You reached the objective!");
+                break;
+            }
+
             var key = Console.ReadKey(true).KeyChar;
             if (key == 'd' && PlayerY < screen[0].Length - 1)
                 PlayerY++;
@@ -54,7 +69,7 @@ class Game
             else if (key == 's' && PlayerX < screen.Length - 1)
                 PlayerX++;
             else if (key == 'q')
-                break; // Press 'q' to quit
+                break;
         }
     }
 }
