@@ -51,7 +51,6 @@ class Game
         while (true)
         {
             DrawScreen();
-
             // Win condition
             if (PlayerX == ObjectX && PlayerY == ObjectY)
             {
