@@ -6,37 +6,41 @@ using System.IO;
 //                                --- This is my C# starting baseplate ---
 //            --- It is made for me cuz im lazy and copy pasting code snippets is easier ---
 //namespace Name_of_program
-    class Program
+class Program
+{
+    static void Copy_Paste()
     {
-        static void Main(string[] args)
-        {
-            int length = 0;
-            int rowI = 0;//amuda ^ 0
-            int collumn_ = 0;//shura > 1
-            // || amuda
-            // -- shura
-            int[] arr = new int[length];
-            int[,] matrix = new int[rowI,collumn_];
-            /*
-            (row, column)
-            (0,0) (0,1) (0,2)
-            (1,0) (1,1) (1,2)
-            (2,0) (2,1) (2,2)
-            */
-            // matrix.GetLength(1) -> collumn
-            // matrix.GetLength(0) -> row
-            int num = int.Parse(Console.ReadLine());
-          
-            Console.WriteLine($"");
+        int length = 0;
+        int rowI = 2;//amuda ^ 0
+        int collumn_ = 3;//shura > 1
+                         // || amuda
+                         // -- shura
+        int[] arr = new int[length];
+        int[,] matrix = new int[rowI, collumn_];
+        // matrix.GetLength(1) -> collumn
+        // matrix.GetLength(0) -> row
+        //int num = int.Parse(Console.ReadLine());
 
-            //debug - write the whole matrix
-            for (int FrowI = 0; FrowI < matrix.GetLength(0); FrowI++)
+        Console.WriteLine($"");
+        for (int FrowI = 0; FrowI < matrix.GetLength(0); FrowI++)
+        {
+            for (int Fcollumn_ = 0; Fcollumn_ < matrix.GetLength(1); Fcollumn_++)
             {
-                for (int Fcollumn_ = 0; Fcollumn_ < matrix.GetLength(1); Fcollumn_++)
-                {
-                    Console.Write(matrix[FrowI,Fcollumn_]);
-                }
-                Console.WriteLine();
+                Console.WriteLine($"ROW {FrowI}    COL {Fcollumn_}");
+                matrix[FrowI, Fcollumn_] = int.Parse(Console.ReadLine());
             }
         }
+        //debug - write the whole matrix
+        for (int FrowI = 0; FrowI < matrix.GetLength(0); FrowI++)
+        {
+            for (int Fcollumn_ = 0; Fcollumn_ < matrix.GetLength(1); Fcollumn_++)
+            {
+                Console.Write(matrix[FrowI, Fcollumn_]);
+            }
+            Console.WriteLine();
+        }
     }
+    static void Main(string[] args)
+    {
+    }
+}
