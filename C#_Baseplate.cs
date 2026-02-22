@@ -28,6 +28,15 @@ using System.IO;
             int num = int.Parse(Console.ReadLine());
           
             Console.WriteLine($"");
-          
+
+            //debug - write the whole matrix
+            for (int FrowI = 0; FrowI < matrix.GetLength(0); FrowI++)
+            {
+                for (int Fcollumn_ = 0; Fcollumn_ < matrix.GetLength(1); Fcollumn_++)
+                {
+                    Console.Write(matrix[FrowI,Fcollumn_]);
+                }
+                Console.WriteLine();
+            }
         }
     }
