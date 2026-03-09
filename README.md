@@ -2,7 +2,7 @@
 
 ## note to self:
 
-## how I write code:
+## how I/to write code:
 
 ### variables
 
