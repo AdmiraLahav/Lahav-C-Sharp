@@ -8,16 +8,19 @@ using System.IO;
 //namespace Name_of_program
 class Program
 {
-    static void Copy_Paste()
+    static void CopyPaste()
     {
         //colors cuz cool - > https://raw.githubusercontent.com/fidian/ansi/master/images/color-codes.png
         string RESET = "\x1b[0m";
+        string green_color = "\x1b[38;5;40m";
         string blue_color = "\x1b[38;5;12m";
         string red_color = "\x1b[38;5;196m";
         string yellow_color = "\x1b[38;5;226m";
-        string INFO = $"[{blue_color}INF{RESET}]";
-        string ERROR = $"[{red_color}ERR{RESET}]";
-        string WARNING = $"[{yellow_color}WRN{RESET}]";
+
+        string program_name = $"[{blue_color}Custom Human Debug{RESET}]";
+        string info = $"[{green_color}INF{RESET}]";
+        string error = $"[{red_color}ERR{RESET}]";
+        string warning = $"[{yellow_color}WRN{RESET}]";
 
         string Func_Readline = Console.ReadLine();
 
@@ -54,6 +57,6 @@ class Program
     }
     static void Main(string[] args)
     {
-        
+
     }
 }
