@@ -6,8 +6,22 @@ using System.IO;
 //                                --- This is my C# starting baseplate ---
 //            --- It is made for me cuz im lazy and copy pasting code snippets is easier ---
 //namespace Name_of_program
+class PublicVariables
+{
+    public string Name;
+    public string Weight;
+    public string Hight;
+}
 class Program
 {
+    static void PublicDemonstration()
+    {
+        PublicVariables[] operators =
+        {
+            new PublicVariables {Name="AdmiraLahav",Weight="70",Hight="180"}
+        };
+        Console.WriteLine(operators[0/*Location of the object we use*/].Name);
+    }
     static void CopyPaste()
     {
         //colors cuz cool - > https://raw.githubusercontent.com/fidian/ansi/master/images/color-codes.png
