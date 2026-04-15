@@ -11,7 +11,7 @@ full words in lowercase with underscores
     X - CurrentPass
     V - current_password
 
-### functions:
+### functions and classes:
 
 full words with uppercase letter at start of every word with them being combined:
 
