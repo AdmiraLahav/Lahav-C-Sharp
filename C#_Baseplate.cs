@@ -14,14 +14,6 @@ class PublicVariables
 }
 class Program
 {
-    static void PublicDemonstration()
-    {
-        PublicVariables[] operators =
-        {
-            new PublicVariables {Name="AdmiraLahav",Weight="70",Hight="180"}
-        };
-        Console.WriteLine(operators[0/*Location of the object we use*/].Name);
-    }
     static void CopyPaste()
     {
         //colors cuz cool - > https://raw.githubusercontent.com/fidian/ansi/master/images/color-codes.png
@@ -36,13 +28,11 @@ class Program
         string error = $"[{red_color}ERR{RESET}]";
         string warning = $"[{yellow_color}WRN{RESET}]";
 
-        string Func_Readline = Console.ReadLine();
-
         int length = 0;
         int rowI = 2;//amuda ^ 0
         int collumn_ = 3;//shura > 1
 
-        int[] arr = new int[length];
+        int[] array = new int[length];
         int[,] matrix = new int[rowI, collumn_];
         // matrix.GetLength(1) -> collumn
         // matrix.GetLength(0) -> row
@@ -51,20 +41,20 @@ class Program
         //input order
         //1 2 3
         //4 5 6
-        for (int FrowI = 0; FrowI < matrix.GetLength(0); FrowI++)
+        for (int for_rowI = 0; for_rowI < matrix.GetLength(0); for_rowI++)
         {
-            for (int Fcollumn_ = 0; Fcollumn_ < matrix.GetLength(1); Fcollumn_++)
+            for (int for_collumn_ = 0; for_collumn_ < matrix.GetLength(1); for_collumn_++)
             {
-                Console.WriteLine($"ROW {FrowI}    COL {Fcollumn_}");
-                matrix[FrowI, Fcollumn_] = int.Parse(Func_Readline);
+                Console.WriteLine($"ROW {for_rowI}    COL {for_collumn_}");
+                matrix[for_rowI, for_collumn_] = for_collumn_*100+for_rowI;
             }
         }
         //debug - write the whole matrix
-        for (int FrowI = 0; FrowI < matrix.GetLength(0); FrowI++)
+        for (int for_rowI = 0; for_rowI < matrix.GetLength(0); for_rowI++)
         {
-            for (int Fcollumn_ = 0; Fcollumn_ < matrix.GetLength(1); Fcollumn_++)
+            for (int for_collumn_ = 0; for_collumn_ < matrix.GetLength(1); for_collumn_++)
             {
-                Console.Write(matrix[FrowI, Fcollumn_]);
+                Console.Write(matrix[for_rowI, for_collumn_]);
             }
             Console.WriteLine();
         }
