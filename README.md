@@ -1,7 +1,3 @@
-# ***my C# projects***
-
-## note to self:
-
 ## how I/to write code:
 
 ### variables
