@@ -7,6 +7,13 @@ full words in lowercase with underscores
     X - CurrentPass
     V - current_password
 
+### constants
+
+full words in UPPERCASR with underscores
+
+    X - reset_terminal_color
+    V - RESET_TERMINAL_COLOR
+
 ### functions and classes:
 
 full words with uppercase letter at start of every word with them being combined:
