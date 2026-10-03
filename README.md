@@ -30,9 +30,7 @@ depends on the language and use, make sure that if the first file is lowercase e
 
     V - main.py
     commands.py
-
-    don't smoke me IK I gotta change so many of them
-
+    
 ### More examples:
 
 encoding_pairs_array_location # a location counter [counter] in an array
